@@ -1,26 +1,21 @@
 {
-  "name": "ai-agent",
+  "name": "server",
   "version": "1.0.0",
-  "main": "Main/index.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node Main/index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@google/genai": "^1.45.0",
     "bcrypt": "^6.0.0",
     "cookie-parser": "^1.4.7",
-    "cookies": "^0.9.1",
-    "cors": "^2.8.6",
     "dotenv": "^17.3.1",
     "express": "^5.2.1",
-    "express-router": "^0.0.1",
     "jsonwebtoken": "^9.0.3",
-    "mongoose": "^9.3.0",
-    "parcel": "^2.16.4",
-    "radis": "^2.0.0",
+    "mongoose": "^9.3.1",
     "redis": "^5.11.0"
   }
 }
