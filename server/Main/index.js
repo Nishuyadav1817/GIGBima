@@ -10,7 +10,7 @@ const cors = require("cors");
 
 App.use("/worker",WorkerAuth);
 const allowedOrigins = [
-  "https://gig-shield.vercel.app/"
+  "https://gig-bima.vercel.app/"
   
 ];
 
