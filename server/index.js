@@ -12,7 +12,7 @@ require("dotenv").config();
 const cors = require("cors");
 
 const allowedOrigins = [
-  "https://gig-bima.vercel.app/"
+  "https://gig-bima.vercel.app"
 ];
 
 App.use(cors({
