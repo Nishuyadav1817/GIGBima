@@ -23,9 +23,9 @@ function App() {
            <div className="nav-btns">
       <button className="btn-primary">Pay Premium</button>
 
-      {user && user.FullName ? (
+      {user && user.firstName? (
         // Show user's FullName instead of Login button
-        <span className="user-name">{user.FullName}</span>
+        <span className="user-name">{user.firstName}</span>
       ) : (
         <button
           className="btn-outline"
