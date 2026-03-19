@@ -21,14 +21,14 @@ console.log("here1");
      const Token=Jwt.sign({_id:NewWorker._id,EmailId:NewWorker.EmailId},process.env.JWT_KEY,{expiresIn:60*60});
      res.cookie('Token',Token,{maxAge: 60*60*1000})
    const reply = {
-            firstName: NewWorker.FirstName,
+            firstName: NewWorker.FullName,
             emailId:NewWorker.EmailId,
             
         }
    
   res.status(200).json({ 
         user: reply, 
-          Token,
+        Token,
         message: "User registered successfully" });
 
          
