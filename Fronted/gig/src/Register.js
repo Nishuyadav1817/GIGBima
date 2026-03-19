@@ -34,8 +34,9 @@ function Register() {
       });
 
       const data = await response.json();
-      alert(data.message || "Registered Successfully");
-      
+      alert(data.message || "Registered Successfully data not send");
+      console.log(data.token);
+      console.log(data.user)
       if (data.token) {
 
         localStorage.setItem("token", data.token);
