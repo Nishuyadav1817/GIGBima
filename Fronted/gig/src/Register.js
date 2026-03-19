@@ -76,6 +76,9 @@ function Register() {
       if (data.token) {
         localStorage.setItem("token", data.token);
       }
+       if (data.user) {
+  localStorage.setItem("user", JSON.stringify(data.user)); 
+}
       if (response.ok) {
       navigate("/");  
       }
