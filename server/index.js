@@ -1,34 +1,31 @@
 const express = require("express");
 const App = express();
-App.use(express.json());
+
+require("dotenv").config();
+
+const cors = require("cors");
+const cookieParser = require("cookie-parser");
 
 const DataBase = require("./Main/DB");
 const WorkerAuth = require("./Register/Reg");
 
-const cookieParser = require("cookie-parser");
+App.use(express.json());
 App.use(cookieParser());
-
-require("dotenv").config();
-const cors = require("cors");
-
 
 const allowedOrigins = [
   "https://gig-bima.vercel.app",
   "http://localhost:1234"
 ];
 
-
-
 App.use(cors({
-  origin: true,
+  origin: allowedOrigins,
   credentials: true
-
 }));
 
-App.use("/worker", WorkerAuth);
+// Connect Database
+DataBase();
 
-DataBase().then(() => {
-  console.log("DB connected");
-});
+// Routes
+App.use("/worker", WorkerAuth);
 
 module.exports = App;
