@@ -42,6 +42,9 @@ function Register() {
         localStorage.setItem("token", data.token);
         console.log(data.token);
       }
+      if (data.user) {
+  localStorage.setItem("user", JSON.stringify(data.user)); 
+}
        if (response.ok) {
       navigate("/");  
     }
