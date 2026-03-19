@@ -1,10 +1,18 @@
 import React from "react";
 import "./App.css";
-
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-function App() {
 
+function App() {
+ const [user, setUser] = useState(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+   
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) setUser(JSON.parse(storedUser));
+  }, []);
+
   return (
     <div className="main">
 
@@ -12,12 +20,21 @@ function App() {
       <nav className="navbar glass">
         <div className="logo">🛡️ GIGBima</div>
 
-        <div className="nav-btns">
-          <button className="btn-primary">Pay Premium</button>
-          <button className="btn-outline" onClick={() => navigate("/register")}>
-      Login
-    </button>
-        </div>
+           <div className="nav-btns">
+      <button className="btn-primary">Pay Premium</button>
+
+      {user ? (
+        // Show user's FullName instead of Login button
+        <span className="user-name">{user.FullName}</span>
+      ) : (
+        <button
+          className="btn-outline"
+          onClick={() => navigate("/register")}
+        >
+          Login
+        </button>
+      )}
+    </div>
       </nav>
 
       {/* HERO */}
