@@ -7,6 +7,7 @@ const Razorpay = require("razorpay");
 const Jwt=require('jsonwebtoken')
 const Redis=require('../Main/Radis');
 const UserVerify=require("../Middlewere/usermidlewere")
+require("dotenv").config();
 //Register of worker
 WorkerAuth.post("/register",async(req,res) =>{
 console.log("here1");
@@ -107,9 +108,10 @@ WorkerAuth.post("/logout",UserVerify,async(req,res) =>{
         res.send("invalid error" +err)
     }
 })
+console.log(process.env.RAZORPAY_KEY_ID);
 const razorpay = new Razorpay({
-  key_id: process.env.RAZORPAY_KEY_ID,
-  key_secret: process.env.RAZORPAY_KEY_SECRET
+  key_id:process.env.RAZORPAY_KEY_ID,
+  key_secret:process.env.RAZORPAY_KEY_SECRET
 });
 
 WorkerAuth.post("/base", UserVerify, async (req, res) => {
