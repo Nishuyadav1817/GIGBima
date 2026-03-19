@@ -23,7 +23,7 @@ console.log("here1");
    const reply = {
             firstName: NewWorker.FullName,
             emailId:NewWorker.EmailId,
-            
+            _id: user._id,
         }
    
   res.status(200).json({ 
@@ -67,7 +67,7 @@ WorkerAuth.post("/login" ,async(req,res) =>{
      res.cookie('Token',Token,{maxAge: 60*60*1000})
 
          const reply = {
-            firstName: user.FirstName,
+            firstName: user.FullName,
             emailId: user.EmailId,
             _id: user._id,
            
