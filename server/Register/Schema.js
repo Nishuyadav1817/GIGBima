@@ -2,18 +2,13 @@ const mongoose=require("mongoose");
 const {Schema}=mongoose;
 
 const Worker=new Schema({
-      FirstName:{
+      FullName:{
         type:String,
          required:true,
         minLength:3,
-        maxLength:30
+        maxLength:50
        } ,
-       LastName:{
-        type:String,
-       // required:true,
-        minLength:3,
-        maxLength:30
-       },
+       
 
        EmailId:{
          type:String,
@@ -50,7 +45,7 @@ const Worker=new Schema({
     maxLength:300
    },
    Phonenumber:{
-    type:Number,
+    type:String,
     required:true,
     minLength:10,
     maxLength:12

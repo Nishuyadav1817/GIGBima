@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosClient = axios.create({
-    baseURL: "https://ceetcode-omega.vercel.app",
+    baseURL: "https://gig-bima-ovmt.vercel.app/",
     withCredentials: true,
     headers: {
         "Content-Type": "application/json"

@@ -1,0 +1,66 @@
+/* Unique wrapper to avoid conflict */
+.gigshield-main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, #f5f6f7, #66a8c6);
+}
+
+/* Card container */
+.gigshield-card {
+  width: 450px;
+  padding: 45px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  text-align: center;
+  color: rgb(35, 3, 3);
+  border: 2px solid #7b8cff;
+  box-shadow: 0px 8px 25px rgba(11, 11, 11, 0.3);
+}
+
+/* Title */
+.gigshield-title {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Input fields */
+.gigshield-card input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Button */
+.gigshield-card button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #0e4e26;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.gigshield-card button:hover {
+  opacity: 0.85;
+}
+
+/* Toggle text */
+.gigshield-toggle {
+  margin-top: 15px;
+  cursor: pointer;
+  color: #070606;
+}
+
+.gigshield-toggle:hover {
+  color: white;
+}

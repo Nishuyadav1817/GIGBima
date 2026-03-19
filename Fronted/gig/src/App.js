@@ -44,7 +44,7 @@ function App() {
         <div className="plan-grid">
 
           <div className="card glass">
-            <h3>BASIC</h3>
+            <h3 >BASIC</h3>
             <h1>₹25/week</h1>
 
             <ul>
@@ -52,7 +52,7 @@ function App() {
               <li>✔ Weather + Social cover</li>
             </ul>
 
-            <button className="btn-green">Select Plan</button>
+            <button className="btn-green" onClick={() => navigate("/Basic")}>Select Plan</button>
           </div>
 
           <div className="card glass pro">

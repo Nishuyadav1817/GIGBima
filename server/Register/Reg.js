@@ -8,7 +8,7 @@ const Redis=require('../Main/Radis');
 const UserVerify=require("../Middlewere/usermidlewere")
 //Register of worker
 WorkerAuth.post("/register",async(req,res) =>{
-
+console.log("here1");
      try{
   const password = req.body.password; 
      
@@ -33,7 +33,8 @@ WorkerAuth.post("/register",async(req,res) =>{
 
          
      }catch(err){
-        console.log(err)
+         console.log(err);
+ res.status(500).json({message:"Server Error"});
      }
 
 })
