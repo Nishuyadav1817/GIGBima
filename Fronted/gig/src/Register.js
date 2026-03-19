@@ -1,8 +1,9 @@
-
+import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import "./Register.css";
 
 function Register() {
+  const navigate = useNavigate();
   const [isLogin, setIsLogin] = useState(false);
   const [form, setForm] = useState({
    FullName: "",
