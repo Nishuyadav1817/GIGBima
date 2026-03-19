@@ -23,17 +23,14 @@ function App() {
            <div className="nav-btns">
       <button className="btn-primary">Pay Premium</button>
 
-      {user && user.firstName? (
-        // Show user's FullName instead of Login button
-        <span className="user-name">{user.firstName}</span>
-      ) : (
+   
         <button
           className="btn-outline"
           onClick={() => navigate("/register")}
         >
           Login
         </button>
-      )}
+ 
     </div>
       </nav>
 
