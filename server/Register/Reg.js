@@ -25,7 +25,7 @@ console.log("here1");
    const reply = {
             firstName: NewWorker.FullName,
             emailId:NewWorker.EmailId,
-            _id: user._id,
+            _id: NewWorker._id,
         }
    
   res.status(200).json({ 
