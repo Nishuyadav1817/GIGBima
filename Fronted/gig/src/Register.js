@@ -34,6 +34,14 @@ function Register() {
 
       const data = await response.json();
       alert(data.message || "Registered Successfully");
+      
+      if (data.token) {
+        localStorage.setItem("token", data.token);
+      }
+       if (response.ok) {
+      navigate("/");  
+    }
+
     } catch (error) {
       console.log(error);
       alert("Registration Failed");
