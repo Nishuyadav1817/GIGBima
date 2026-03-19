@@ -1,9 +1,17 @@
-const mongoose=require("mongoose");
+require('dotenv').config(); // Load .env
+
+const mongoose = require('mongoose');
 
 async function DataBase() {
-    await mongoose.connect("mongodb+srv://Nishuyadav1817:%23Nishu1616@nishu1818.iwdfunk.mongodb.net/Guidewire");
-   
+    try {
+        await mongoose.connect(process.env.MONGOURL, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+        });
+        console.log('MongoDB connected successfully');
+    } catch (err) {
+        console.error('MongoDB connection error:', err);
+    }
 }
 
-
-module.exports=DataBase;
+module.exports = DataBase;
