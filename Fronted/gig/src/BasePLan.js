@@ -220,7 +220,7 @@ export default function Payment() {
 
           {/* Pay Button */}
           <button className="p-pay-btn" onClick={handlePayment} disabled={status === "loading"}>
-            {status === "loading" ? "Processing..." : "Pay ₹499"}
+            {status === "loading" ? "Processing..." : "Pay ₹25"}
           </button>
 
           <p className="p-secure">Secure payment powered by Razorpay</p>
